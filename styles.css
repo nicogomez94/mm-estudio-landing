@@ -169,25 +169,6 @@ button { color: inherit; font: inherit; }
 .hero-footer { position: relative; z-index: 3; display: flex; align-items: flex-end; gap: 18px; }
 .hero-footer p { max-width: 310px; margin: 0; color: var(--ink); font-size: 12px; line-height: 1.55; }
 .hero-human-note { display: none; font: 500 24px/1 var(--font-hand); }
-.circle-link {
-  flex: 0 0 76px;
-  width: 76px;
-  height: 76px;
-  margin-left: auto;
-  margin-bottom: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  color: var(--cream);
-  background: var(--ink);
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  font: 9px/1.1 var(--font-body);
-  text-transform: uppercase;
-  transition: transform .35s cubic-bezier(.16,1,.3,1), background .3s;
-}
-.circle-link:hover { color: var(--ink); transform: scale(1.08); background: var(--sage); }
 .hero-reveal { opacity: 0; animation: reveal .8s ease forwards .7s; }
 .hero-shape {
   position: absolute;
@@ -218,22 +199,19 @@ button { color: inherit; font: inherit; }
   background: var(--ink);
 }
 .shape-two {
-  width: 37vw;
-  height: 37vw;
-  min-width: 176px;
-  min-height: 176px;
-  left: -20vw;
-  bottom: 5%;
-  border: 1px solid rgba(251,244,228,.72);
-  background: rgba(178,206,187,.34);
-  animation: floatCircle 9s cubic-bezier(.45,.05,.55,.95) infinite alternate;
-}
-.shape-two::after {
-  content: "";
-  position: absolute;
-  inset: 20%;
-  border: 1px solid rgba(46,32,22,.32);
-  border-radius: 50%;
+  width: 29vw;
+  height: 29vw;
+  min-width: 128px;
+  min-height: 128px;
+  max-width: 210px;
+  max-height: 210px;
+  left: -9vw;
+  bottom: 14%;
+  border-radius: 47% 53% 51% 49%;
+  background: radial-gradient(circle at 62% 40%, rgba(251,244,228,.82) 0%, rgba(178,206,187,.68) 24%, rgba(20,102,107,.46) 50%, rgba(158,206,200,.08) 72%, transparent 80%);
+  filter: blur(8px);
+  opacity: .86;
+  animation: floatCircle 8s cubic-bezier(.45,.05,.55,.95) infinite alternate;
 }
 .hero-trailer { display: none; }
 
@@ -244,8 +222,8 @@ button { color: inherit; font: inherit; }
   50% { transform: translate3d(-28px,18px,0) rotate(180deg); }
 }
 @keyframes floatCircle {
-  0% { transform: translate3d(0,0,0) scale(1); }
-  100% { transform: translate3d(38px,-24px,0) scale(1.08); }
+  0% { transform: translate3d(0,0,0) scale(.94) rotate(-5deg); border-radius: 47% 53% 51% 49%; }
+  100% { transform: translate3d(24px,-18px,0) scale(1.05) rotate(8deg); border-radius: 53% 47% 45% 55%; }
 }
 
 .client-strip { padding: 34px 0; border-bottom: 1px solid var(--line); background: var(--cream); overflow: hidden; }
@@ -254,10 +232,9 @@ button { color: inherit; font: inherit; }
 .marquee-track span { margin-right: 42px; font-family: var(--font-display); font-size: 24px; font-weight: 400; letter-spacing: -.05em; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-.statement { padding-top: 94px; padding-bottom: 96px; background: var(--sage); }
-.statement-copy { max-width: 1060px; margin: 56px 0 70px; }
+.statement { padding-top: 72px; padding-bottom: 74px; background: var(--sage); }
+.statement-copy { max-width: 960px; margin: 44px 0 50px; }
 .statement-copy p { margin: 0; font-family: var(--font-display); font-size: 32px; line-height: .98; letter-spacing: -.055em; text-transform: uppercase; }
-.statement-copy p:first-child { color: var(--muted); }
 .statement-copy em { font-family: var(--font-hand); font-weight: 500; text-transform: none; }
 .statement-meta { display: flex; justify-content: space-between; gap: 24px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--muted); font: 8px var(--font-body); text-transform: uppercase; }
 
@@ -431,12 +408,10 @@ button { color: inherit; font: inherit; }
   .hero-title { font-size: 88px; }
   .hero-title .line:first-child { font-size: 1em; }
   .hero-footer p { max-width: 430px; font-size: 13px; }
-  .circle-link { flex-basis: 98px; width: 98px; height: 98px; }
-  .circle-link { margin-bottom: 0; }
   .client-strip { padding: 34px 0; }
   .marquee-track span { margin-right: 70px; font-size: 36px; }
-  .statement { padding-top: 140px; padding-bottom: 140px; }
-  .statement-copy { margin-top: 90px; margin-bottom: 100px; }
+  .statement { padding-top: 104px; padding-bottom: 104px; }
+  .statement-copy { margin-top: 64px; margin-bottom: 72px; }
   .statement-copy p { font-size: 62px; }
   .services { padding-top: 120px; padding-bottom: 140px; }
   .section-heading h2, .work-intro h2, .results-head h2 { margin-top: 58px; font-size: 68px; }
@@ -475,7 +450,7 @@ button { color: inherit; font: inherit; }
   .line-offset { padding-left: 13vw; }
   .hero-footer p { margin-left: 14vw; }
   .shape-one { width: 40vw; height: 40vw; top: 7%; right: -9vw; }
-  .shape-two { width: 27vw; height: 27vw; left: -9vw; bottom: -2%; }
+  .shape-two { width: 18vw; height: 18vw; left: -5vw; bottom: 10%; }
   .hero-trailer {
     position: absolute;
     z-index: 4;
