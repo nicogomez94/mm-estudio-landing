@@ -71,16 +71,6 @@ const metricObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.metric-value').forEach((metric) => metricObserver.observe(metric));
 
-if (window.matchMedia('(pointer: fine)').matches) {
-  document.querySelectorAll('.service-item').forEach((item) => {
-    item.addEventListener('pointermove', (event) => {
-      const rect = item.getBoundingClientRect();
-      item.style.setProperty('--hover-x', `${event.clientX - rect.left}px`);
-      item.style.setProperty('--hover-y', `${event.clientY - rect.top}px`);
-    });
-  });
-}
-
 const cursor = document.querySelector('.cursor');
 if (cursor && window.matchMedia('(pointer: fine)').matches) {
   window.addEventListener('pointermove', (event) => {
