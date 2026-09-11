@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Caveat:wght@500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=projects">
 </head>
 <body>
   <div class="intro-screen" aria-hidden="true">
@@ -64,6 +64,7 @@
         <source src="assets/mm-studio-reel.mp4" type="video/mp4">
       </video>
       <div class="hero-video-scrim" aria-hidden="true"></div>
+      <a class="hero-work-link" href="#trabajos" aria-label="Ir a trabajos destacados"></a>
 
       <div class="hero-kicker hero-reveal">
         <span class="status-dot"></span>
@@ -93,8 +94,8 @@
     <section class="client-strip fade-in" aria-label="Clientes">
       <div class="marquee" aria-label="Listado de clientes">
         <div class="marquee-track">
-          <span>ASTER</span><span>NÓMADE</span><span>KŌBA</span><span>RAYO</span><span>SILVESTRE</span><span>NÚCLEO</span>
-          <span aria-hidden="true">ASTER</span><span aria-hidden="true">NÓMADE</span><span aria-hidden="true">KŌBA</span><span aria-hidden="true">RAYO</span><span aria-hidden="true">SILVESTRE</span><span aria-hidden="true">NÚCLEO</span>
+          <span>REPUESTOS SEGUÍ</span><span>GS REFRIGERACIÓN</span><span>LOS TÉCNICOS DE TIKTOK</span><span>SERVICE SEGUÍ</span><span>TRAVIS TREND</span><span>BUDAPEST MODA</span><span>D'S HOME</span><span>LUCÍA ATRIO</span><span>ESSENCE YBV</span>
+          <span aria-hidden="true">REPUESTOS SEGUÍ</span><span aria-hidden="true">GS REFRIGERACIÓN</span><span aria-hidden="true">LOS TÉCNICOS DE TIKTOK</span><span aria-hidden="true">SERVICE SEGUÍ</span><span aria-hidden="true">TRAVIS TREND</span><span aria-hidden="true">BUDAPEST MODA</span><span aria-hidden="true">D'S HOME</span><span aria-hidden="true">LUCÍA ATRIO</span><span aria-hidden="true">ESSENCE YBV</span>
         </div>
       </div>
     </section>
@@ -160,60 +161,61 @@
       <div class="section-shell work-intro fade-in">
         <span class="eyebrow">03 — Trabajo seleccionado</span>
         <h2 id="work-title">PROYECTOS QUE<br>CAMBIARON EL PULSO.</h2>
-        <p>Una selección de identidades y experiencias construidas para mover negocio, cultura y percepción.</p>
+        <p>Historias, campañas e ideas construidas para convertir contenido en cultura, comunidad y conversación.</p>
       </div>
 
       <div class="project-grid">
-        <a class="project-card fade-in cursor-target" href="#contacto" aria-label="Proyecto Áurea, ver caso">
-          <div class="project-media media-aurea">
-            <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1600&q=85" alt="Composición floral en tonos cálidos para la identidad de Áurea" loading="lazy">
-            <div class="project-mark">Á</div>
-            <div class="project-caption">BOTÁNICA<br>CONTEMPORÁNEA</div>
-          </div>
-          <div class="project-info">
-            <div><h3>Áurea</h3><p>Una nueva categoría para el bienestar botánico.</p></div>
-            <span>Estrategia de marca · Identidad · Envases</span>
-            <span>2025</span>
-          </div>
-        </a>
+        <button class="project-card project-modal-trigger fade-in cursor-target" type="button" data-project="beca" aria-haspopup="dialog" aria-label="Abrir caso Beca Remastered">
+          <span class="project-media media-beca">
+            <img src="assets/projects/beca-storytelling.jpg" alt="Frame del contenido audiovisual Beca Remastered" loading="lazy">
+            <span class="project-word">BECA</span>
+            <span class="project-caption">STORYTELLING<br>DE PRODUCTO</span>
+          </span>
+          <span class="project-info">
+            <span><strong>Beca Remastered</strong><small>Una escena cotidiana convertida en relato.</small></span>
+            <span>Concepto · Guion · Edición</span>
+            <span>VER CASO</span>
+          </span>
+        </button>
 
-        <a class="project-card fade-in cursor-target" href="#contacto" aria-label="Proyecto Punto Cero, ver caso">
-          <div class="project-media media-zero">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1300&q=85" alt="Consola retro intervenida para la identidad de Punto Cero" loading="lazy">
-            <span class="zero-type">0<span>→</span>1</span>
-            <span class="zero-label">PUNTO<br>CERO</span>
-          </div>
-          <div class="project-info">
-            <div><h3>Punto Cero</h3><p>Tecnología con una actitud más humana.</p></div>
-            <span>Posicionamiento · Digital · Lanzamiento</span>
-            <span>2024</span>
-          </div>
-        </a>
+        <button class="project-card project-modal-trigger fade-in cursor-target" type="button" data-project="dagna" aria-haspopup="dialog" aria-label="Abrir caso Dagna Kills">
+          <span class="project-media media-dagna">
+            <img src="assets/projects/dagna-kills.jpg" alt="Frame de la campaña de viajes Dagna Kills" loading="lazy">
+            <span class="project-word project-word-right">DAGNA</span>
+            <span class="project-caption">INFLUENCER MKT<br>TRAVEL DIARIES</span>
+          </span>
+          <span class="project-info">
+            <span><strong>Dagna Kills</strong><small>Viajes contados desde una voz propia.</small></span>
+            <span>Storytelling · Influencers · Social</span>
+            <span>VER CASO</span>
+          </span>
+        </button>
 
-        <a class="project-card fade-in cursor-target" href="#contacto" aria-label="Proyecto Pulso, ver caso">
-          <div class="project-media media-pulso">
-            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1800&q=85" alt="Multitud en un festival para la campaña Pulso" loading="lazy">
-            <div class="pulse-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <span class="pulse-type">PULSO</span>
-          </div>
-          <div class="project-info">
-            <div><h3>Pulso Festival</h3><p>Una campaña que hizo vibrar a toda una ciudad.</p></div>
-            <span>Campaña · Dirección de arte · Animación</span>
-            <span>2025</span>
-          </div>
-        </a>
+        <button class="project-card project-modal-trigger fade-in cursor-target" type="button" data-project="hostel" aria-haspopup="dialog" aria-label="Abrir caso Hostel Point">
+          <span class="project-media media-hostel">
+            <img src="assets/projects/hostel-point.jpg" alt="Frame de la serie social Hostel Point" loading="lazy">
+            <span class="project-word">POINT</span>
+            <span class="project-caption">CONTENIDO SOCIAL<br>HOSTEL CULTURE</span>
+          </span>
+          <span class="project-info">
+            <span><strong>Hostel Point</strong><small>Hospitalidad, personajes y humor en vertical.</small></span>
+            <span>Idea · Producción · Campaña social</span>
+            <span>VER CASO</span>
+          </span>
+        </button>
 
-        <a class="project-card fade-in cursor-target" href="#contacto" aria-label="Proyecto Marea, ver caso">
-          <div class="project-media media-marea">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&amp;fit=crop&amp;w=1500&amp;q=85" alt="Dirección de arte de moda para la identidad de Marea" loading="lazy">
-            <span class="marea-type">MA<br>REA</span>
-            <span class="marea-stamp">DESDE<br>EL SUR</span>
-          </div>
-          <div class="project-info">
-            <div><h3>Marea</h3><p>Moda local con una voz que cruza fronteras.</p></div>
-            <span>Identidad · Comercio digital · Campaña</span>
-            <span>2026</span>
-          </div>
+        <a class="project-card project-external fade-in cursor-target" href="https://www.instagram.com/repuestossegui/" target="_blank" rel="noopener noreferrer" aria-label="Ver Repuestos Seguí en Instagram">
+          <span class="project-media media-segui">
+            <span class="segui-orbit" aria-hidden="true"></span>
+            <span class="segui-type">32K</span>
+            <span class="project-caption">COMUNIDAD TÉCNICA<br>CONTENIDO DE NICHO</span>
+            <i class="fa-brands fa-instagram project-instagram" aria-hidden="true"></i>
+          </span>
+          <span class="project-info">
+            <span><strong>Repuestos Seguí</strong><small>Una comunidad que transforma expertise en alcance.</small></span>
+            <span>Contenido · Comunidad · Performance</span>
+            <span>INSTAGRAM ↗</span>
+          </span>
         </a>
       </div>
     </section>
@@ -242,11 +244,11 @@
       <div class="testimonial fade-in">
         <div class="quote-mark">“</div>
         <blockquote>
-          No vinieron a decorar lo que ya teníamos. Nos ayudaron a entender qué valía la pena decir y encontraron una forma imposible de ignorar.
+          No queríamos publicar por publicar. Encontraron un tono que entiende al rubro, habla como la comunidad y convierte conocimiento técnico en contenido que la gente comparte.
         </blockquote>
         <div class="quote-author">
-          <span>Malena Ortiz</span>
-          <span>CMO · Áurea</span>
+          <span>Equipo Repuestos Seguí</span>
+          <span>Contenido · Comunidad técnica</span>
         </div>
       </div>
     </section>
@@ -265,6 +267,39 @@
       </div>
     </section>
   </main>
+
+  <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+    <div class="project-modal-shell">
+      <div class="project-modal-topbar">
+        <span id="project-modal-index">CASO 01 / 03</span>
+        <span>MENTES MODERNAS · TRABAJO SELECCIONADO</span>
+        <button class="project-modal-close" type="button" aria-label="Cerrar proyecto"><span></span><span></span></button>
+      </div>
+
+      <div class="project-modal-grid">
+        <div class="project-modal-media">
+          <video id="project-modal-video" controls playsinline preload="metadata"></video>
+          <span class="project-modal-format">9:16 · SOCIAL FILM</span>
+        </div>
+
+        <article class="project-modal-story">
+          <span class="eyebrow" id="project-modal-kicker">STORYTELLING · PRODUCTO</span>
+          <h2 id="project-modal-title">BECA REMASTERED</h2>
+          <p id="project-modal-description"></p>
+
+          <div class="project-modal-facts" id="project-modal-facts"></div>
+
+          <div class="project-modal-deliverables">
+            <span>ENTREGABLES</span>
+            <p id="project-modal-deliverables"></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="project-modal-orbit" aria-hidden="true"><span></span></div>
+      <span class="project-modal-ghost" id="project-modal-ghost" aria-hidden="true">BECA</span>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <div>
@@ -291,6 +326,6 @@
     <span>Hablemos</span>
   </a>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=projects"></script>
 </body>
 </html>
