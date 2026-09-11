@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Caveat:wght@500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="styles.css?v=projects">
+  <link rel="stylesheet" href="styles.css?v=projects-4">
 </head>
 <body>
   <div class="intro-screen" aria-hidden="true">
@@ -204,6 +204,33 @@
           </span>
         </button>
 
+        <button class="project-card project-modal-trigger fade-in cursor-target" type="button" data-project="gs" aria-haspopup="dialog" aria-label="Abrir caso GS Refrigeración, galería de cuatro videos">
+          <span class="project-media media-gs">
+            <img src="assets/projects/gs-refrigeracion-1.jpg" alt="Frame de la serie de contenido de GS Refrigeración" loading="lazy">
+            <span class="project-word">G·S</span>
+            <span class="project-caption">CONTENIDO SERIAL<br>REFRIGERACIÓN</span>
+            <span class="project-count-badge">04 VIDEOS</span>
+          </span>
+          <span class="project-info">
+            <span><strong>GS Refrigeración</strong><small>El oficio técnico convertido en una serie que enseña y entretiene.</small></span>
+            <span>Idea · Serie · Producción</span>
+            <span>VER SERIE</span>
+          </span>
+        </button>
+
+        <button class="project-card project-modal-trigger fade-in cursor-target" type="button" data-project="refrimarket" aria-haspopup="dialog" aria-label="Abrir caso Refrimarket y SMR32">
+          <span class="project-media media-refrimarket">
+            <img src="assets/projects/refrimarket-smr32.jpg" alt="Frame del contenido audiovisual de Refrimarket y SMR32" loading="lazy">
+            <span class="project-word project-word-right">R32</span>
+            <span class="project-caption">PRODUCT CONTENT<br>EDUCACIÓN TÉCNICA</span>
+          </span>
+          <span class="project-info">
+            <span><strong>Refrimarket + SMR32</strong><small>Información urgente con códigos de entretenimiento.</small></span>
+            <span>Concepto · Producción · Edición</span>
+            <span>VER CASO</span>
+          </span>
+        </button>
+
         <a class="project-card project-external fade-in cursor-target" href="https://www.instagram.com/repuestossegui/" target="_blank" rel="noopener noreferrer" aria-label="Ver Repuestos Seguí en Instagram">
           <span class="project-media media-segui">
             <span class="segui-orbit" aria-hidden="true"></span>
@@ -271,15 +298,23 @@
   <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
     <div class="project-modal-shell">
       <div class="project-modal-topbar">
-        <span id="project-modal-index">CASO 01 / 03</span>
+        <span id="project-modal-index">CASO 01 / 05</span>
         <span>MENTES MODERNAS · TRABAJO SELECCIONADO</span>
         <button class="project-modal-close" type="button" aria-label="Cerrar proyecto"><span></span><span></span></button>
       </div>
 
       <div class="project-modal-grid">
         <div class="project-modal-media">
-          <video id="project-modal-video" controls playsinline preload="metadata"></video>
-          <span class="project-modal-format">9:16 · SOCIAL FILM</span>
+          <div class="project-modal-video-stage">
+            <video id="project-modal-video" controls playsinline preload="metadata"></video>
+            <span class="project-modal-format" id="project-modal-piece-label">9:16 · SOCIAL FILM</span>
+          </div>
+          <div class="project-modal-gallery" id="project-modal-gallery" hidden>
+            <button class="project-gallery-arrow project-gallery-prev" type="button" aria-label="Ver video anterior"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+            <div class="project-gallery-position" aria-live="polite">PIEZA <strong id="project-gallery-current">01</strong><span id="project-gallery-total">/04</span></div>
+            <div class="project-gallery-dots" id="project-gallery-dots" aria-label="Elegir video"></div>
+            <button class="project-gallery-arrow project-gallery-next" type="button" aria-label="Ver video siguiente"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
         </div>
 
         <article class="project-modal-story">
@@ -326,6 +361,6 @@
     <span>Hablemos</span>
   </a>
 
-  <script src="main.js?v=projects"></script>
+  <script src="main.js?v=projects-4"></script>
 </body>
 </html>
