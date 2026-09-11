@@ -55,6 +55,7 @@ const metricObserver = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting || entry.target.dataset.counted) return;
     entry.target.dataset.counted = 'true';
     const end = Number(entry.target.dataset.count);
+    const decimals = Number(entry.target.dataset.decimals || 0);
     const suffix = entry.target.dataset.suffix || '';
     const duration = reducedMotion ? 0 : 1200;
     const startTime = performance.now();
@@ -62,7 +63,10 @@ const metricObserver = new IntersectionObserver((entries) => {
     const tick = (now) => {
       const progressValue = duration === 0 ? 1 : Math.min((now - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progressValue, 3);
-      entry.target.textContent = `${Math.round(end * eased)}${suffix}`;
+      const value = decimals > 0
+        ? (end * eased).toFixed(decimals).replace('.', ',')
+        : Math.round(end * eased);
+      entry.target.textContent = `${value}${suffix}`;
       if (progressValue < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -344,5 +348,93 @@ if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
     });
   });
 }
+
+const contactForm = document.querySelector('#contact-form');
+const contactStatus = document.querySelector('#contact-status');
+const contactSubmit = contactForm?.querySelector('button[type="submit"]');
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const setContactStatus = (message, type = '') => {
+  contactStatus.textContent = message;
+  contactStatus.classList.toggle('is-error', type === 'error');
+  contactStatus.classList.toggle('is-success', type === 'success');
+};
+
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const formData = new FormData(contactForm);
+  const name = String(formData.get('name') || '').trim();
+  const email = String(formData.get('email') || '').trim();
+  const message = String(formData.get('message') || '').trim();
+  const goals = formData.getAll('goals').map((goal) => String(goal).trim()).filter(Boolean);
+
+  if (!contactForm.checkValidity()) {
+    setContactStatus('Completá los campos obligatorios para poder enviarlo.', 'error');
+    contactForm.reportValidity();
+    return;
+  }
+  if (!emailPattern.test(email)) {
+    setContactStatus('Revisá el correo: parece estar incompleto.', 'error');
+    contactForm.querySelector('[name="email"]').focus();
+    return;
+  }
+  if (!message) {
+    setContactStatus('Contanos brevemente qué necesitan resolver.', 'error');
+    contactForm.querySelector('[name="message"]').focus();
+    return;
+  }
+  if (goals.length === 0) {
+    setContactStatus('Elegí al menos un objetivo para trabajar con MM.', 'error');
+    contactForm.querySelector('[name="goals"]').focus();
+    return;
+  }
+
+  const details = [
+    `WhatsApp: ${String(formData.get('whatsapp') || '').trim()}`,
+    `Empresa / marca: ${String(formData.get('brand') || '').trim()}`,
+    `Actividad: ${String(formData.get('activity') || '').trim()}`,
+    `Redes: ${String(formData.get('social') || '').trim()}`,
+    `Contenido actual: ${String(formData.get('manager') || '').trim()}`,
+    `Objetivos: ${goals.join(', ')}`,
+    `Inicio: ${String(formData.get('start') || '').trim()}`,
+    `Presupuesto: ${String(formData.get('budget') || '').trim()}`,
+    `Origen: ${String(formData.get('referral') || '').trim()}`,
+    '',
+    `Necesidad: ${message}`
+  ].join('\n');
+
+  contactSubmit.disabled = true;
+  contactSubmit.querySelector('span').textContent = 'Enviando…';
+  setContactStatus('Enviando la consulta…');
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email,
+        message: details,
+        company: ''
+      })
+    });
+
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      throw new Error('Respuesta inválida');
+    }
+
+    if (!response.ok || result?.success !== true) throw new Error('No se pudo enviar');
+    contactForm.reset();
+    setContactStatus('¡Gracias! Recibimos la información y te escribimos pronto.', 'success');
+  } catch {
+    setContactStatus('No pudimos enviar la consulta. Probá nuevamente en unos minutos.', 'error');
+  } finally {
+    contactSubmit.disabled = false;
+    contactSubmit.querySelector('span').textContent = 'Enviar consulta';
+  }
+});
 
 document.querySelector('#year').textContent = new Date().getFullYear();
