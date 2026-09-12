@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Caveat:wght@500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="styles.css?v=layout-2">
+  <link rel="stylesheet" href="styles.css?v=layout-3">
 </head>
 <body>
   <div class="intro-screen" aria-hidden="true">
@@ -60,7 +60,7 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <video class="hero-video" autoplay muted playsinline preload="metadata" data-start="5" aria-hidden="true" tabindex="-1">
         <source src="assets/mm-hero-cascarave.mp4" type="video/mp4">
       </video>
       <div class="hero-video-scrim" aria-hidden="true"></div>
@@ -88,6 +88,15 @@
       <div class="hero-trailer" aria-hidden="true">
         <span>VER<br>TRABAJOS</span>
         <i class="fa-solid fa-arrow-down"></i>
+      </div>
+    </section>
+
+    <section class="client-strip fade-in" aria-label="Clientes">
+      <div class="marquee" aria-label="Listado de clientes">
+        <div class="marquee-track">
+          <span>REPUESTOS SEGUÍ</span><span>GS REFRIGERACIÓN</span><span>SERVICE SEGUÍ</span><span>TRAVIS TREND</span><span>BUDAPESTT MODA</span><span>DS HOME</span><span>LUCÍA ATRIO</span><span>ESSENCE</span>
+          <span aria-hidden="true">REPUESTOS SEGUÍ</span><span aria-hidden="true">GS REFRIGERACIÓN</span><span aria-hidden="true">SERVICE SEGUÍ</span><span aria-hidden="true">TRAVIS TREND</span><span aria-hidden="true">BUDAPESTT MODA</span><span aria-hidden="true">DS HOME</span><span aria-hidden="true">LUCÍA ATRIO</span><span aria-hidden="true">ESSENCE</span>
+        </div>
       </div>
     </section>
 
@@ -220,15 +229,6 @@
       </div>
     </section>
 
-    <section class="client-strip fade-in" aria-label="Clientes">
-      <div class="marquee" aria-label="Listado de clientes">
-        <div class="marquee-track">
-          <span>REPUESTOS SEGUÍ</span><span>GS REFRIGERACIÓN</span><span>SERVICE SEGUÍ</span><span>TRAVIS TREND</span><span>BUDAPESTT MODA</span><span>DS HOME</span><span>LUCÍA ATRIO</span><span>ESSENCE</span>
-          <span aria-hidden="true">REPUESTOS SEGUÍ</span><span aria-hidden="true">GS REFRIGERACIÓN</span><span aria-hidden="true">SERVICE SEGUÍ</span><span aria-hidden="true">TRAVIS TREND</span><span aria-hidden="true">BUDAPESTT MODA</span><span aria-hidden="true">DS HOME</span><span aria-hidden="true">LUCÍA ATRIO</span><span aria-hidden="true">ESSENCE</span>
-        </div>
-      </div>
-    </section>
-
     <section class="services section-shell" id="servicios" aria-labelledby="services-title">
       <div class="section-heading fade-in">
         <h2 id="services-title">DE LA PRIMERA PREGUNTA<br>A LA ÚLTIMA IMPRESIÓN.</h2>
@@ -339,8 +339,8 @@
             <input id="contact-activity" name="activity" type="text" required>
           </div>
           <div class="form-field form-field-double">
-            <label for="contact-social">Link a sus redes actuales *</label>
-            <input id="contact-social" name="social" type="url" inputmode="url" placeholder="https://instagram.com/tu-marca" required>
+            <label for="contact-social">Redes actuales</label>
+            <input id="contact-social" name="social" type="text" placeholder="@tu-marca, un enlace o como prefieras">
           </div>
           <div class="form-field">
             <label for="contact-manager">¿Quién maneja el contenido hoy? *</label>
@@ -458,7 +458,6 @@
       <p>Content Studio · Estrategia y creatividad.</p>
     </div>
     <div class="footer-links">
-      <a href="mailto:hola@mentesmodernas.com">hola@mentesmodernas.com</a>
       <a href="#trabajos">Trabajos</a>
       <a href="#servicios">Servicios</a>
     </div>
@@ -469,11 +468,11 @@
     </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/?text=Hola%20Mentes%20Modernas%2C%20quiero%20contarles%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+  <a class="whatsapp" href="https://wa.me/5493412633883?text=Hola%20Mentes%20Modernas%2C%20quiero%20contarles%20un%20proyecto" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp al +54 9 3412 63-3883">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     <span>Hablemos</span>
   </a>
 
-  <script src="main.js?v=layout-2"></script>
+  <script src="main.js?v=layout-3"></script>
 </body>
 </html>

@@ -1,5 +1,22 @@
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  const heroVideoStart = Number(heroVideo.dataset.start || 0);
+  const seekToHeroStart = () => {
+    if (Number.isFinite(heroVideo.duration) && heroVideo.duration > heroVideoStart) {
+      heroVideo.currentTime = heroVideoStart;
+    }
+  };
+
+  if (heroVideo.readyState >= 1) seekToHeroStart();
+  else heroVideo.addEventListener('loadedmetadata', seekToHeroStart, { once: true });
+  heroVideo.addEventListener('ended', () => {
+    seekToHeroStart();
+    heroVideo.play().catch(() => {});
+  });
+}
+
 const intro = document.querySelector('.intro-screen');
 intro?.addEventListener('animationend', (event) => {
   if (event.animationName === 'introLeave') intro.remove();
