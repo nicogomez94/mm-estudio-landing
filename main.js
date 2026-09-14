@@ -131,62 +131,8 @@ if (hero && heroTrailer && !reducedMotion && window.matchMedia('(pointer: fine)'
 }
 
 const projectCases = {
-  beca: {
-    index: 'CASO 01 / 05',
-    kicker: 'STORYTELLING · PRODUCTO',
-    title: 'BECA REMASTERED',
-    ghost: 'BECA',
-    media: [{
-      video: 'assets/projects/beca-storytelling.mp4',
-      poster: 'assets/projects/beca-storytelling.jpg',
-      label: '9:16 · SOCIAL FILM'
-    }],
-    description: 'Una pieza construida alrededor de un ritual cotidiano. El producto aparece dentro de la historia, con humor, tensión y una edición diseñada para sostener la atención hasta el último segundo.',
-    facts: [
-      ['9:16', 'FORMATO NATIVO'],
-      ['01', 'HISTORIA CENTRAL'],
-      ['FULL', 'PRODUCCIÓN + POST']
-    ],
-    deliverables: 'Concepto creativo · Guion · Dirección de contenido · Producción · Edición social'
-  },
-  dagna: {
-    index: 'CASO 02 / 05',
-    kicker: 'INFLUENCER MKT · VIAJES',
-    title: 'DAGNA KILLS',
-    ghost: 'DAGNA',
-    media: [{
-      video: 'assets/projects/dagna-kills.mp4',
-      poster: 'assets/projects/dagna-kills.jpg',
-      label: '9:16 · TRAVEL DIARY'
-    }],
-    description: 'Una serie de travel diaries que mezcla recomendación, moda y observación cultural. La cámara acompaña una voz auténtica y convierte cada locación en un capítulo reconocible.',
-    facts: [
-      ['DIARY', 'LENGUAJE EDITORIAL'],
-      ['UGC+', 'CÓDIGO DE CONTENIDO'],
-      ['SERIE', 'PENSADO PARA ESCALAR']
-    ],
-    deliverables: 'Idea de serie · Storytelling · Curaduría de escenas · Influencer marketing · Edición'
-  },
-  hostel: {
-    index: 'CASO 03 / 05',
-    kicker: 'CONTENIDO SOCIAL · HOSPITALIDAD',
-    title: 'HOSTEL POINT',
-    ghost: 'POINT',
-    media: [{
-      video: 'assets/projects/hostel-point.mp4',
-      poster: 'assets/projects/hostel-point.jpg',
-      label: '9:16 · SOCIAL SERIES'
-    }],
-    description: 'Personajes, humor y situaciones reales para mostrar la experiencia del hostel desde adentro. Una campaña vertical que transforma hospitalidad en cultura compartible.',
-    facts: [
-      ['CAST', 'PERSONAJES REALES'],
-      ['SERIE', 'NARRATIVA SOCIAL'],
-      ['9:16', 'VIDEO MOBILE FIRST']
-    ],
-    deliverables: 'Concepto · Guion de situaciones · Producción · Dirección de talentos · Postproducción'
-  },
   gs: {
-    index: 'CASO 04 / 05',
+    index: 'CASO 01 / 04 · DESTACADO',
     kicker: 'CONTENIDO SERIAL · REFRIGERACIÓN',
     title: 'GS REFRIGERACIÓN',
     ghost: 'G·S',
@@ -196,31 +142,67 @@ const projectCases = {
       { video: 'assets/projects/gs-refrigeracion-3.mp4', poster: 'assets/projects/gs-refrigeracion-3.jpg', label: 'PIEZA 03 · TUTORIAL EN CAMPO' },
       { video: 'assets/projects/gs-refrigeracion-4.mp4', poster: 'assets/projects/gs-refrigeracion-4.jpg', label: 'PIEZA 04 · HISTORIA DE MARCA' }
     ],
-    description: 'Una serie que saca el conocimiento técnico del taller y lo convierte en contenido cercano. Conversaciones, situaciones reales y demostraciones construyen una voz experta sin perder espontaneidad.',
+    description: 'Cinco contenidos enfocados en generar atención, nutrición y conversión. El resultado: 50 personas en un curso presencial y un posicionamiento claro como experto del sector técnico.',
     facts: [
-      ['04', 'PIEZAS CONECTADAS'],
-      ['9:16', 'FORMATO VERTICAL'],
-      ['SERIE', 'SISTEMA ESCALABLE']
+      ['05', 'CONTENIDOS'],
+      ['50', 'PERSONAS EN EL CURSO'],
+      ['EXPERTO', 'POSICIONAMIENTO']
     ],
     deliverables: 'Concepto de serie · Guion de contenidos · Producción en locación · Dirección · Edición social'
   },
+  hostel: {
+    index: 'CASO 02 / 04',
+    kicker: 'CONTENIDO SOCIAL · HOSPITALIDAD',
+    title: 'HOSTEL POINT',
+    ghost: 'POINT',
+    media: [{
+      video: 'assets/projects/hostel-point.mp4',
+      poster: 'assets/projects/hostel-point.jpg',
+      label: '9:16 · SOCIAL SERIES'
+    }],
+    description: '250 leads nuevos en 7 días con un único video. Trabajamos sobre los puntos de dolor de la audiencia para que se sintiera representada y así aumentar la ocupación del 60% al 90%.',
+    facts: [
+      ['250', 'LEADS NUEVOS'],
+      ['07', 'DÍAS'],
+      ['60→90%', 'OCUPACIÓN']
+    ],
+    deliverables: 'Concepto · Guion de situaciones · Producción · Dirección de talentos · Postproducción'
+  },
   refrimarket: {
-    index: 'CASO 05 / 05',
+    index: 'CASO 03 / 04',
     kicker: 'PRODUCT CONTENT · EDUCACIÓN TÉCNICA',
-    title: 'REFRIMARKET / SMR32',
+    title: 'REFRIMARKET EVENTO',
     ghost: 'R32',
     media: [{
       video: 'assets/projects/refrimarket-smr32.mp4',
       poster: 'assets/projects/refrimarket-smr32.jpg',
       label: '9:16 · PRODUCT STORY'
     }],
-    description: 'Información técnica urgente contada con códigos de entretenimiento. Una pieza que toma un tema complejo, instala tensión desde el primer segundo y lo vuelve claro, relevante y compartible.',
+    description: 'Producción audiovisual enfocada en dolores técnicos para promocionar un evento y generar inscriptos. Más de 900 registros y 600 asistentes presenciales: atención, conversión y posicionamiento en un contenido pensado con intención.',
     facts: [
-      ['R32', 'TEMA CENTRAL'],
-      ['ALERTA', 'GANCHO NARRATIVO'],
-      ['9:16', 'MOBILE FIRST']
+      ['+900', 'INSCRIPTOS'],
+      ['+600', 'ASISTENTES'],
+      ['01', 'CONTENIDO CLAVE']
     ],
     deliverables: 'Concepto · Investigación temática · Guion · Producción · Edición y adaptación social'
+  },
+  dagna: {
+    index: 'CASO 04 / 04',
+    kicker: 'INFLUENCER MKT · VIAJES',
+    title: 'DAGNA KILLS',
+    ghost: 'DAGNA',
+    media: [{
+      video: 'assets/projects/dagna-kills.mp4',
+      poster: 'assets/projects/dagna-kills.jpg',
+      label: '9:16 · TRAVEL DIARY'
+    }],
+    description: 'Una serie de travel diaries para un talento de YELO Management en Madrid, enfocada en generar conexión con la audiencia de la influencer desde una voz propia y reconocible.',
+    facts: [
+      ['MADRID', 'LOCACIÓN'],
+      ['YELO', 'MANAGEMENT'],
+      ['SERIE', 'TRAVEL DIARIES']
+    ],
+    deliverables: 'Idea de serie · Storytelling · Curaduría de escenas · Influencer marketing · Edición'
   }
 };
 
