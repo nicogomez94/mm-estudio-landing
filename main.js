@@ -44,6 +44,31 @@ mobileMenu?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach((question) => {
+  const item = question.closest('.faq-item');
+  const answer = document.querySelector(`#${question.getAttribute('aria-controls')}`);
+  answer?.setAttribute('aria-hidden', 'true');
+
+  question.addEventListener('click', () => {
+    const willOpen = question.getAttribute('aria-expanded') !== 'true';
+
+    faqQuestions.forEach((otherQuestion) => {
+      const otherItem = otherQuestion.closest('.faq-item');
+      const otherAnswer = document.querySelector(`#${otherQuestion.getAttribute('aria-controls')}`);
+      otherQuestion.setAttribute('aria-expanded', 'false');
+      otherItem?.classList.remove('is-open');
+      otherAnswer?.setAttribute('aria-hidden', 'true');
+    });
+
+    if (willOpen) {
+      question.setAttribute('aria-expanded', 'true');
+      item?.classList.add('is-open');
+      answer?.setAttribute('aria-hidden', 'false');
+    }
+  });
+});
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
