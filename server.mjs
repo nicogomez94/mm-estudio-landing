@@ -82,7 +82,8 @@ const handleContact = async (request, response) => {
 };
 
 const serveFile = async (request, response, pathname) => {
-  const cleanPath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
+  let cleanPath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '').replace(/\/+$/, '');
+  if (!extname(cleanPath)) cleanPath += '.html';
   const normalizedPath = normalize(cleanPath);
   const extension = extname(normalizedPath).toLowerCase();
   if (normalizedPath.startsWith('..') || !publicExtensions.has(extension)) {
